@@ -10,7 +10,7 @@ interface ApiService {
     @Headers(
         "Content-Type: application/json"
     )
-    @POST("/")
+    @POST("/predict")
     fun getChatBot(
         @Body chatBotResponse: ChatBotResponse
     ): Call<ChatBotResponse>

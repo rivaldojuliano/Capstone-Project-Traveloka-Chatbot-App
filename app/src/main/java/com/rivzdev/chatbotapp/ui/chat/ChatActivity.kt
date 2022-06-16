@@ -27,7 +27,7 @@ class ChatActivity : AppCompatActivity() {
         adapter = ListChatAdapter()
         binding.apply {
             rvChat.layoutManager = LinearLayoutManager(this@ChatActivity)
-            rvChat.adapter =adapter
+            rvChat.adapter = adapter
             rvChat.setHasFixedSize(true)
         }
     }
@@ -41,10 +41,9 @@ class ChatActivity : AppCompatActivity() {
                     return@setOnClickListener
                 } else {
                     adapter.addChatToList(ChatBotResponse(edtChat.text.toString(), ""))
-                    mainViewModel.getMessageBot(ChatBotResponse(edtChat.text.toString(),""))
+                    mainViewModel.getMessageBot(ChatBotResponse(edtChat.text.toString(), ""))
                     mainViewModel.message.observe(this@ChatActivity) {
                         adapter.addChatToList(it)
-                        adapter.notifyDataSetChanged()
                     }
                 }
             }

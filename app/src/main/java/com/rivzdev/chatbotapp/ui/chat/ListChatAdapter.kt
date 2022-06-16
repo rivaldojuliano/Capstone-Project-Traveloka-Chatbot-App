@@ -10,11 +10,6 @@ import com.rivzdev.chatbotapp.model.response.ChatBotResponse
 class ListChatAdapter: RecyclerView.Adapter<ListChatAdapter.ViewHolder>() {
     private val list = ArrayList<ChatBotResponse>()
 
-    fun addChatToList(chat: ChatBotResponse) {
-        list.add(chat)
-        notifyItemChanged(list.size)
-    }
-
     inner class ViewHolder(private val binding: ItemChatRowBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(chat: ChatBotResponse) {
             with(binding) {
@@ -38,8 +33,11 @@ class ListChatAdapter: RecyclerView.Adapter<ListChatAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(list[position])
-
     }
 
     override fun getItemCount(): Int = list.size
+    fun addChatToList(chat: ChatBotResponse) {
+        list.add(chat)
+        notifyDataSetChanged()
+    }
 }
