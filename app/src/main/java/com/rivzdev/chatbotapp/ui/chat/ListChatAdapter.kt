@@ -1,6 +1,7 @@
 package com.rivzdev.chatbotapp.ui.chat
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rivzdev.chatbotapp.databinding.ItemChatRowBinding
@@ -11,7 +12,7 @@ class ListChatAdapter: RecyclerView.Adapter<ListChatAdapter.ViewHolder>() {
 
     fun addChatToList(chat: ChatBotResponse) {
         list.add(chat)
-        notifyDataSetChanged()
+        notifyItemChanged(list.size)
     }
 
     inner class ViewHolder(private val binding: ItemChatRowBinding): RecyclerView.ViewHolder(binding.root) {
@@ -19,6 +20,13 @@ class ListChatAdapter: RecyclerView.Adapter<ListChatAdapter.ViewHolder>() {
             with(binding) {
                 tvCustomer.text = chat.input
                 tvBot.text = chat.output
+                if (!tvCustomer.text.isNullOrEmpty()) {
+                    tvBot.visibility = View.GONE
+                }
+
+                if (!tvBot.text.isNullOrEmpty()) {
+                    tvCustomer.visibility = View.GONE
+                }
             }
         }
     }
@@ -30,6 +38,7 @@ class ListChatAdapter: RecyclerView.Adapter<ListChatAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(list[position])
+
     }
 
     override fun getItemCount(): Int = list.size

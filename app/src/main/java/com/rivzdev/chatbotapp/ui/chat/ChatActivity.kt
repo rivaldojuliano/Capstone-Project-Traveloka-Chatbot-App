@@ -35,7 +35,7 @@ class ChatActivity : AppCompatActivity() {
     private fun sendChat() {
 
         binding.apply {
-            fabSend.setOnClickListener {
+            btnSend.setOnClickListener {
                 if (edtChat.text.isNullOrEmpty()) {
                     Toast.makeText(this@ChatActivity, "Please enter a text", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
