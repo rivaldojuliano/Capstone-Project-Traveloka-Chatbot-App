@@ -13,12 +13,4 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <style name="Theme.ChatBotApp.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/light_blue</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>
-        <item name="android:windowSplashScreenBrandingImage" tools:targetApi="s">@drawable/branding</item>
-        <item name="windowSplashScreenAnimationDuration">6000</item>
-        <item name="postSplashScreenTheme">@style/Theme.ChatBotApp</item>
-    </style>
 </resources>
