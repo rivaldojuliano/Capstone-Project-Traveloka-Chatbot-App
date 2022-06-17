@@ -10,4 +10,5 @@
     <color name="grey">#B5B5B5</color>
     <color name="light_grey">#C4C4C4</color>
     <color name="faded_light_grey">#E5E5E5</color>
+    <color name="red">#FF0000</color>
 </resources>

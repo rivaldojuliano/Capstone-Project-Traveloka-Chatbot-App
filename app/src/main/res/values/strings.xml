@@ -16,4 +16,5 @@
     <string name="end_conversation">End Conversation</string>
     <string name="end_conversation_question">Are you sure you want to end the conversation?</string>
     <string name="exit">Exit</string>
+    <string name="cancel">Cancel</string>
 </resources>

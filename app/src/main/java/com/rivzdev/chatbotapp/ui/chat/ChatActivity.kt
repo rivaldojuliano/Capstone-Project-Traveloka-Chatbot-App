@@ -2,6 +2,8 @@ package com.rivzdev.chatbotapp.ui.chat
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
@@ -56,17 +58,28 @@ class ChatActivity : AppCompatActivity() {
 
         binding.apply {
             btnEndConversation.setOnClickListener {
-                AlertDialog.Builder(this@ChatActivity).apply {
-                    setTitle(resources.getString(R.string.end_conversation))
-                    setMessage(resources.getString(R.string.end_conversation_question))
-                    setPositiveButton(resources.getString(R.string.exit)) {_, _ ->
-                        val intent = Intent(context, HomePage::class.java)
-                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                        startActivity(intent)
-                        finish()
-                    }
-                    create()
-                    show()
+
+                val view = View.inflate(this@ChatActivity, R.layout.custom_alert_dialog, null)
+                val builder = AlertDialog.Builder(this@ChatActivity)
+                builder.setView(view)
+
+                val dialog = builder.create()
+                dialog.show()
+                dialog.window?.setBackgroundDrawableResource(android.R.color.white)
+                dialog.setCancelable(false)
+
+                val btnCancel = dialog.findViewById<Button>(R.id.btn_cancel)
+                val btnExit = dialog.findViewById<Button>(R.id.btn_exit)
+
+                btnCancel?.setOnClickListener {
+                    dialog.dismiss()
+                }
+
+                btnExit?.setOnClickListener {
+                    val intent = Intent(this@ChatActivity, HomePage::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
                 }
             }
         }
