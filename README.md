@@ -1,5 +1,8 @@
 # Capstone-Project-Traveloka-Chatbot-App
 
+## Background Story
+It’s important to company in this present day to have a tools that can help them to handle a complaint by a customer, and therefore there is customer service, but what if the proportion of customer service and customer complaint is not proportional, it will give a difficult time to the company, and therefore our group make a Chatbot that can handle the complaint by a customer. Our chatbot can answer automatically without waiting in advance for a customer. Our feature it’s just not handle a customer complain, but also have any other feature such as give a suggestion for recommendation place that must visit in the selected city and can reply the greetings too
+
 ## ScreenShoot
 
 ![Screenshot_2022-06-17-21-43-12-47_8ed55213b3dff2eb432e08f325158cc9](https://user-images.githubusercontent.com/54896129/174322152-a2605aef-432f-47f3-aba9-7bd5167dd83c.png)
