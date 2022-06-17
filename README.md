@@ -4,4 +4,4 @@
 1. Programming Language: Kotlin
 2. IDE: Android Studio
 3. Design Tools: Figma
-4. Prototype: [Click here]([https://www.petanikode.com/](https://www.figma.com/file/FsMcCyJ8tM80LgwQMnmwxH/Traveloka-Chatbot-Design?node-id=3%3A2))
+4. Prototype: [Click here](https://www.figma.com/file/FsMcCyJ8tM80LgwQMnmwxH/Traveloka-Chatbot-Design?node-id=3%3A2)
