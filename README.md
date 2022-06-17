@@ -1,5 +1,7 @@
 # Capstone-Project-Traveloka-Chatbot-App
 
+## ScreenShoot
+
 ## Tools and Resources
 1. Programming Language: Kotlin
 2. IDE: Android Studio
