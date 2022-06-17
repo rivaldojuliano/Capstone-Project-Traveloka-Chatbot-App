@@ -1,9 +1,9 @@
 package com.rivzdev.chatbotapp.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.rivzdev.chatbotapp.R
 import com.rivzdev.chatbotapp.ui.home.HomePage
 import com.rivzdev.chatbotapp.utils.Constant

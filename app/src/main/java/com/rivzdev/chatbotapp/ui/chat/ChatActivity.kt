@@ -77,4 +77,7 @@ class ChatActivity : AppCompatActivity() {
             adapter.addChatToList(it)
         }
     }
+
+    override fun onBackPressed() {
+    }
 }

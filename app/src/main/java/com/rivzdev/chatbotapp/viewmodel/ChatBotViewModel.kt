@@ -25,7 +25,7 @@ class ChatBotViewModel: ViewModel() {
                 response: Response<ChatBotResponse>
             ) {
                 if (response.isSuccessful ) {
-                    _message.value = response.body()
+                     _message.value = response.body()
                     Log.d(Constant.TAG, "onResponse: ${response.body()}")
                 } else {
                     Log.d(Constant.TAG, "onFailure: ${response.message()}")
