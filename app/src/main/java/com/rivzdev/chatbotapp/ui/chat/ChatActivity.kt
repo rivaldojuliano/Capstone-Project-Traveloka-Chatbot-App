@@ -19,16 +19,17 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        adapter = ListChatAdapter()
         showRecycleListChat()
         sendChat()
+        setupViewModel()
     }
 
     private fun showRecycleListChat() {
-        adapter = ListChatAdapter()
         binding.apply {
+            rvChat.setHasFixedSize(true)
             rvChat.layoutManager = LinearLayoutManager(this@ChatActivity)
             rvChat.adapter = adapter
-            rvChat.setHasFixedSize(true)
         }
     }
 
@@ -37,16 +38,22 @@ class ChatActivity : AppCompatActivity() {
         binding.apply {
             btnSend.setOnClickListener {
                 if (edtChat.text.isNullOrEmpty()) {
-                    Toast.makeText(this@ChatActivity, "Please enter a text", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ChatActivity, "Please enter a text", Toast.LENGTH_SHORT)
+                        .show()
                     return@setOnClickListener
                 } else {
                     adapter.addChatToList(ChatBotResponse(edtChat.text.toString(), ""))
                     mainViewModel.getMessageBot(ChatBotResponse(edtChat.text.toString(), ""))
-                    mainViewModel.message.observe(this@ChatActivity) {
-                        adapter.addChatToList(it)
-                    }
+                    binding.edtChat.text.clear()
+                    rvChat.scrollToPosition(adapter.itemCount - 1)
                 }
             }
+        }
+    }
+
+    private fun setupViewModel() {
+        mainViewModel.message.observe(this@ChatActivity) {
+            adapter.addChatToList(it)
         }
     }
 }

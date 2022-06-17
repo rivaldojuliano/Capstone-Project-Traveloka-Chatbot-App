@@ -15,7 +15,7 @@
         android:background="@drawable/ic_bubble_bot"
         android:gravity="center_vertical"
         android:maxWidth="300dp"
-        android:padding="16dp"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_customer"
@@ -28,7 +28,7 @@
         android:background="@drawable/ic_bubble_customer"
         android:gravity="center_vertical"
         android:maxWidth="300dp"
-        android:padding="16dp"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Hi, July Maria! Nice to meet you." />
