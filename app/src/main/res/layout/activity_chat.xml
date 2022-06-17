@@ -37,6 +37,7 @@
         android:layout_marginStart="16dp"
         android:text="@string/july_maria"
         android:textColor="@color/white"
+        android:fontFamily="@font/nunito_sans_semibold"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
@@ -57,6 +58,7 @@
         android:text="@string/online"
         android:textSize="14sp"
         android:textColor="@color/white"
+        android:fontFamily="@font/nunito_sans"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
@@ -107,7 +109,8 @@
         android:background="@drawable/ic_edittext_bg"
         android:hint="@string/type_a_message"
         android:importantForAutofill="no"
-        android:inputType="textMultiLine"
+        android:inputType="textMultiLine|textCapSentences"
+        android:fontFamily="@font/nunito_sans"
         android:lines="@integer/material_motion_duration_long_1"
         android:padding="8dp"
         android:scrollbars="vertical"

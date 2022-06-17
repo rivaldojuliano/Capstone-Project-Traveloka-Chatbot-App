@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="380dp"
             android:background="@drawable/helpdesk"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:fontFamily="@font/nunito_sans_semibold"
             android:text="@string/need_help"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -38,18 +39,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:text="@string/_24_7"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:text="@string/_24_7" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/helpdesk_center"
+            android:fontFamily="@font/nunito_sans_bold"
             android:textColor="@color/white"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +66,7 @@
             android:layout_marginTop="32dp"
             android:text="@string/tell_us"
             android:textColor="@color/black"
+            android:fontFamily="@font/nunito_sans_bold"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +80,7 @@
             android:text="@string/our_crew"
             android:textAlignment="center"
             android:textColor="@color/grey"
+            android:fontFamily="@font/nunito_sans_semibold"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -118,6 +123,7 @@
                     android:text="@string/chat"
                     android:textColor="@color/black"
                     android:textSize="24sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
                     app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
@@ -126,6 +132,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/start_a_conversation_now"
                     android:textColor="@color/light_grey"
+                    android:fontFamily="@font/nunito_sans_semibold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -173,6 +180,7 @@
                     android:text="@string/faqs"
                     android:textColor="@color/black"
                     android:textSize="24sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
                     app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
@@ -182,6 +190,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/find_intelligent"
                     android:textColor="@color/light_grey"
+                    android:fontFamily="@font/nunito_sans_semibold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView6"

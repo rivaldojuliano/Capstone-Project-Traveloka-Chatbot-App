@@ -17,10 +17,12 @@ class ListChatAdapter: RecyclerView.Adapter<ListChatAdapter.ViewHolder>() {
                 tvBot.text = chat.output
                 if (!tvCustomer.text.isNullOrEmpty()) {
                     tvBot.visibility = View.GONE
+                    tvCustomer.visibility = View.VISIBLE
                 }
 
                 if (!tvBot.text.isNullOrEmpty()) {
                     tvCustomer.visibility = View.GONE
+                    tvBot.visibility = View.VISIBLE
                 }
             }
         }
